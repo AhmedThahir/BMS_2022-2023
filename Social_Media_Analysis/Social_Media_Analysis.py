@@ -45,7 +45,6 @@ df = (
 )
 
 df["Date"] = df["Date"].dt.strftime('%Y-%m')
-df
 
 
 # In[4]:
