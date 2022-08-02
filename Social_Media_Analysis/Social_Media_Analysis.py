@@ -62,7 +62,7 @@ fig = go.Figure().update_layout(
   	"Monthly Social Media Posts" +
   	"<br><sup>" + "Higher is better" + "</sup>",
   title_x = 0.08, #left-align
-  
+
   # axes titles
   xaxis_title = "Time",
   yaxis_title = "Number of Posts",
@@ -116,4 +116,18 @@ fig.show(config = dict(
       displayModeBar = False,
       showTips = False
 ))
+
+
+# In[6]:
+
+
+fig.write_html("social_media_analysis_plotly.html",
+               full_html=False,
+               include_plotlyjs = "../../../backend/plugins/plotly/plotly-basic.min.js",
+               config = dict(
+                 doubleClickDelay = 400, # (ms) affects the single click delay; default = 300ms
+                 displayModeBar = False,
+                 showTips = False
+               )
+              )
 
